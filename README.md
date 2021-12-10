@@ -4,7 +4,7 @@
 ## start
 ```bash
 npm install
-npm dev
+npm run dev
 ```
 
 ## build
