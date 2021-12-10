@@ -1,0 +1,67 @@
+html,
+body {
+  height: 100vh;
+  background: transparent;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  color: var(--theme-color);
+}
+
+:root {
+  --background-color: #fff;
+  --theme-color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #323233;
+    --theme-color: #fff;
+  }
+}
+
+input {
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid;
+  color: var(--theme-color);
+}
+button {
+  background-color: transparent;
+  border: 1px solid;
+  font-size: 14px;
+  color: var(--theme-color);
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#app header {
+  flex-shrink: 0;
+  position: relative;
+  height: 12px;
+  background: transparent;
+}
+#app header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  border-bottom: 12px solid var(--background-color);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+main {
+  flex: 1;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: var(--background-color);
+  padding: 30px;
+}

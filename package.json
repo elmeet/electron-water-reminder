@@ -1,0 +1,39 @@
+{
+  "name": "electron-water-reminder",
+  "version": "0.1.0",
+  "main": "src/main.js",
+  "description": "water reminder desktop",
+  "scripts": {
+    "dev": "electron .",
+    "build": "CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder build"
+  },
+  "keywords": [],
+  "author": "elmeet <elmeet@qq.com>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "electron": "^14.2.1",
+    "electron-builder": "^22.14.5"
+  },
+  "build": {
+    "productName": "Water Reminder",
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "appId": "com.elmeet.tip.desktop",
+    "mac": {
+      "icon":"./build/icon/512*512.png",
+      "target": {
+        "arch": "x64",
+        "target": "dmg"
+      }
+    },
+    "dmg": {
+      "sign": false
+    },
+    "directories": {
+      "buildResources": "./build",
+      "output": "./release"
+    }
+  }
+}

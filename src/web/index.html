@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link href="./styles.css" rel="stylesheet" />
+    <title>He</title>
+
+  </head>
+  <body>
+    <div id="app">
+      <header></header>
+      <main>
+        <div class="row">
+          时间设置(分): <input id="rangeInput" type="range" min="1" max="100" defaultValue="30" />
+          <p>每隔 <span id="rangeValue">30</span> 分钟提醒</p>
+        </div>
+        <div class="row">
+          <button id="exitApp">退出软件</button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
