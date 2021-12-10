@@ -1,7 +1,7 @@
 # water reminder desktop
 
 
-## install
+## start
 ```bash
 npm install
 npm dev
