@@ -12,7 +12,7 @@ const timer = {
     timer.t = setTimeout(() => {
       const notification = {
         title: "喝水",
-        body: "活动一下脖子, 省着点用哇",
+        body: "活动一下, 脖子省着点用哇",
       };
       new window.Notification(notification.title, notification);
       timer.start();
@@ -32,7 +32,6 @@ window.addEventListener("DOMContentLoaded", () => {
     timer.setMinutes(rangeInput.value);
     timer.start();
   });
-
 
   exitApp.addEventListener("click", () => {
     ipcRenderer.send("exitApp");

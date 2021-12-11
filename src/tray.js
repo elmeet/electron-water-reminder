@@ -4,7 +4,7 @@ const { createWin, winWidth, hideWin } = require("./window");
 let appIcon = null;
 
 module.exports.createTray = function () {
-  const iconName = "./assets/blackTemplate.png";
+  const iconName = "./assets/tray.png";
   const iconPath = path.join(__dirname, iconName);
   const nImage = nativeImage.createFromPath(iconPath);
   appIcon = new Tray(nImage);
