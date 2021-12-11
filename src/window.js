@@ -7,7 +7,7 @@ exports.winWidth = winWidth;
 exports.winHeight = winHeight;
 
 let win = null;
-module.exports.createWin = function ({ x, y }) {
+module.exports.createWin = function ({ x, y } = { x: 0, y: 0 }) {
   if (win) {
     win.show();
     win.setPosition(x, y);
@@ -23,6 +23,8 @@ module.exports.createWin = function ({ x, y }) {
     skipTaskbar: true,
     frame: false,
     acceptFirstMouse: true,
+    // show: false,
+    opacity: 0,
     autoHideMenuBar: true,
     backgroundColor: "#00000000",
     webPreferences: {
@@ -31,6 +33,9 @@ module.exports.createWin = function ({ x, y }) {
     },
   });
 
+  win.hide()
+  win.setOpacity(1)
+
   //   // and load the index.html of the app.
   win.loadFile(path.join(__dirname, "web/index.html"));
   if (!app.isPackaged) {
@@ -38,8 +43,8 @@ module.exports.createWin = function ({ x, y }) {
   }
 };
 
-module.exports.hideWin = function(){
-    if(win){
-        win.hide()
-    }
-}
+module.exports.hideWin = function () {
+  if (win) {
+    win.hide();
+  }
+};

@@ -1,6 +1,7 @@
 // Modules to control application life and create native browser window
 const { app, ipcMain } = require("electron");
 const { createTray } = require("./tray");
+const { createWin } = require("./window");
 const ex = process.execPath;
 
 // 单例关闭
@@ -17,6 +18,7 @@ app.dock.hide();
 app.whenReady().then(() => {
   app.dock.hide();
   createTray();
+  createWin()
 
   //  开机自启动
   app.setLoginItemSettings({
